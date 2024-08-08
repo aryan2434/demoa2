@@ -1,0 +1,28 @@
+<div class="home">
+  <h1>Welcome to Expense Tracker</h1>
+  <p>Your ultimate app to manage expenses efficiently.</p>
+  
+  {{#if success_msg}}
+    <p class="success">{{success_msg}}</p>
+  {{/if}}
+  {{#if error_msg}}
+    <p class="error">{{error_msg}}</p>
+  {{/if}}
+  
+  <div class="register-form">
+    <form id="registerForm" action="/users/register" method="POST">
+      <h2>Register</h2>
+      <label>Name</label>
+      <input type="text" name="name" required>
+      <label>Email</label>
+      <input type="email" name="email" required>
+      <label>Password</label>
+      <input type="password" name="password" required>
+      <label>Confirm Password</label>
+      <input type="password" name="password2" required>
+      <button type="submit">Register</button>
+    </form>
+  </div>
+  
+  <p class="login-link">Already have an account? <a href="/users/login">Login</a></p>
+</div>

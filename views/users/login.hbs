@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+  <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Login</h1>
+    {{#if success_msg}}
+      <p class="success">{{success_msg}}</p>
+    {{/if}}
+    {{#if error_msg}}
+      <p class="error">{{error_msg}}</p>
+    {{/if}}
+    <form id="loginForm" action="/users/login" method="POST">
+      <label>Email</label>
+      <input type="email" name="email" required>
+      <label>Password</label>
+      <input type="password" name="password" required>
+      <button type="submit">Login</button>
+    </form>
+    <a href="/users/auth/github">Login with GitHub</a>
+  </div>
+</body>
+</html>

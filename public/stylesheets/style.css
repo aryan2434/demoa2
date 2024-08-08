@@ -1,0 +1,243 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+/* Base Styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background-color: #e3e3e3;
+  color: #333;
+  font-family: 'Poppins', sans-serif;
+  background-image: url('https://www.toptal.com/designers/subtlepatterns/patterns/pw_maze_white.png'); /* Texture background */
+  background-size: cover;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Header Styling */
+header {
+  background-color: #004b23;
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+}
+header nav ul {
+  list-style: none;
+  padding: 0;
+}
+header nav ul li {
+  display: inline;
+  margin: 0 10px;
+}
+header nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1em;
+}
+header nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Container Styling */
+.container {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+/* Home Section Styling */
+.home {
+  text-align: center;
+  padding: 50px 0;
+}
+.home h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+  color: #004b23;
+}
+.home p {
+  font-size: 1.2em;
+  color: #666;
+}
+.home .register-form,
+.home .login-link {
+  margin-top: 30px;
+}
+
+/* Form Styling */
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+}
+form h2 {
+  margin-bottom: 20px;
+  font-size: 2em;
+  color: #004b23;
+}
+form label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+form input[type="text"],
+form input[type="email"],
+form input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+form button {
+  width: 50%;
+  padding: 10px;
+  background-color: #004b23;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+form button:hover {
+  background-color: #006d33;
+}
+
+/* Success and Error Messages */
+.success {
+  color: green;
+  margin-bottom: 20px;
+}
+.error {
+  color: red;
+  margin-bottom: 20px;
+}
+
+/* Footer Styling */
+footer {
+  background-color: #004b23;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+footer p {
+  margin: 0;
+  font-size: 1em;
+}
+
+/* Expenses Page Styling */
+.expenses {
+  padding: 20px;
+}
+.expenses h2 {
+  margin-bottom: 20px;
+  font-size: 2em;
+  color: #004b23;
+}
+.add-expense-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #004b23;
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-bottom: 20px;
+}
+.add-expense-btn:hover {
+  background-color: #006d33;
+}
+.expenses-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+.expenses-table th,
+.expenses-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+.expenses-table th {
+  background-color: #f4f4f4;
+}
+.expenses-table td {
+  background-color: #fff;
+}
+.edit-btn {
+  color: #004b23;
+  text-decoration: none;
+  margin-right: 10px;
+  position: relative;
+  z-index: 1;
+}
+.edit-btn:hover {
+  text-decoration: underline;
+}
+.delete-form {
+  display: inline;
+}
+.delete-btn {
+  background-color: #d9534f;
+  
+}
+.delete-btn:hover {
+  background-color: #c9302c;
+}
+
+/* Improved button styling */
+.button-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+/* Ensure buttons have enough padding and margin */
+button {
+  padding: 10px 15px;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+  header nav ul li {
+    display: block;
+    margin: 5px 0;
+  }
+  form {
+    padding: 10px;
+  }
+  form input[type="text"],
+  form input[type="email"],
+  form input[type="password"] {
+    padding: 8px;
+  }
+}

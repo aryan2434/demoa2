@@ -1,0 +1,31 @@
+<div class="container expenses">
+  <h2>All Expenses</h2>
+  <a href="/expenses/new" class="add-expense-btn">Add New Expense</a>
+  <table class="expenses-table">
+    <thead>
+      <tr>
+        <th>Description</th>
+        <th>Amount</th>
+        <th>Last Updated</th>
+        <th>Category</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each expenses}}
+        <tr>
+          <td>{{this.description}}</td>
+          <td>${{this.amount}}</td>
+          <td>{{this.lastUpdated}}</td>
+          <td>{{this.category}}</td>
+          <td>
+            <a href="/expenses/edit/{{this._id}}" class="edit-btn">Edit</a>
+            <form action="/expenses/{{this._id}}?_method=DELETE" method="POST" class="delete-form">
+              <button type="submit" class="delete-btn">Delete</button>
+            </form>
+          </td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</div>

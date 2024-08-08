@@ -1,0 +1,14 @@
+<h1>Add New Expense</h1>
+<form action="/expenses/add" method="POST">
+  <label>Description</label>
+  <input type="text" name="description" required>
+  <label>Amount</label>
+  <input type="number" name="amount" required>
+  <label>Category</label>
+  <select name="category" required>
+    {{#each categories}}
+      <option value="{{this.name}}">{{this.name}}</option>
+    {{/each}}
+  </select>
+  <button type="submit">Add Expense</button>
+</form>
